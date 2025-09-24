@@ -128,10 +128,10 @@ resource "aws_security_group" "pvt-sg" {
 
 # Ec2 Pub
 resource "aws_instance" "public-ec2" {
-  ami    = "ami-0ad21ae1d0696ad58"
+  ami    = "ami-01b6d88af12965bb6"
   instance_type = "t2.small"
   subnet_id     = aws_subnet.pub-subnet.id
-  #key_name   = "ajith22"
+  key_name   = "Sowmiyakey"
   associate_public_ip_address = true
   vpc_security_group_ids = [aws_security_group.pub-sg.id]
   tags = {
@@ -141,10 +141,10 @@ resource "aws_instance" "public-ec2" {
 
 # EC2 Prvt
 resource "aws_instance" "private-ec2" {
-  ami    = "ami-0ad21ae1d0696ad58"
+  ami    = "ami-01b6d88af12965bb6"
   instance_type = "t2.small"
   subnet_id     = aws_subnet.pvt-subnet.id
-  #key_name   = "ajith22"
+  #key_name   = "Sowmiyakey"
   vpc_security_group_ids = [aws_security_group.pvt-sg.id]
   tags = {
     Name = "Private-vgs"
