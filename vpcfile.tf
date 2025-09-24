@@ -161,7 +161,7 @@ resource "aws_internet_gateway" "igw" {
 }
  # EIP # Must Read Before Delete This
  resource "aws_eip" "myeip" {
-   vpc   =  true
+   domain   =  "vpc"
  }
  #Nat Gate Way
  resource "aws_nat_gateway" "ngw" {
